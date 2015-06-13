@@ -32,6 +32,11 @@ namespace boostMIL
 {
 
 
+/** 
+ * Ada Boost
+ *  
+ * @ingroup boostMIL
+ */
 class AdaBoost: public StrongClassifier
 {
 private:

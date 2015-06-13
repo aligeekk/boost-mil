@@ -17,14 +17,6 @@
 */
 
 /**
- * \defgroup Selector Classifier
- *  
- * @ingroup boostMIL
- *
- * A weak classifier used for online learning which allows to keep perform feature selection. Originally 
- * proposed in [<a href="http://www.google.it/url?sa=t&rct=j&q=online%20boosting%20an%20vision&source=web&cd=1&ved=0CCMQFjAA&url=http%3A%2F%2Fwww.icg.tu-graz.ac.at%2FMembers%2Fhgrabner%2Fpub_hgrabner%2Fgrabner2006OnlineBoosting.pdf%2Fat_download%2Ffile&ei=F4OlToC2A6H64QTVs4HuBA&usg=AFQjCNH6lmEE4tff6UhkMR-IUPL9-DzhIQ&sig2=XB_8z7O0ES1P5ecedlpvHw">PDF</a>] 
- *
- *
  * \author Carlo Ciliberto
  * 
  * Copyright (C) 2010 RobotCub Consortium
@@ -51,7 +43,14 @@ namespace boostMIL
 {
 
 
-
+/** 
+ * Selector Classifier 
+ * A weak classifier used for online learning which allows to 
+ * keep perform feature selection. Originally 
+ * proposed in [<a href="http://www.google.it/url?sa=t&rct=j&q=online%20boosting%20an%20vision&source=web&cd=1&ved=0CCMQFjAA&url=http%3A%2F%2Fwww.icg.tu-graz.ac.at%2FMembers%2Fhgrabner%2Fpub_hgrabner%2Fgrabner2006OnlineBoosting.pdf%2Fat_download%2Ffile&ei=F4OlToC2A6H64QTVs4HuBA&usg=AFQjCNH6lmEE4tff6UhkMR-IUPL9-DzhIQ&sig2=XB_8z7O0ES1P5ecedlpvHw">PDF</a>] 
+ *  
+ * @ingroup boostMIL
+ */
 class SelectorClassifier: public WeakClassifier
 {
 private:

@@ -17,14 +17,6 @@
 */
 
 /**
- * \defgroup Online Boost
- *  
- * @ingroup boostMIL
- *
- * A strong classifier which is trained online using the algorithm proposed by Oza 
- * (<a href="http://ti.arc.nasa.gov/m/profile/oza/b2hd-oza05.html">PDF</a>) 
- *
- *
  * \author Carlo Ciliberto
  * 
  * Copyright (C) 2010 RobotCub Consortium
@@ -32,7 +24,6 @@
  * CopyPolicy: Released under the terms of the GNU GPL v2.0. 
  *  
  */ 
-
 
 
 #ifndef __ONLINE_BOOST__
@@ -49,6 +40,14 @@ namespace boostMIL
 {
 
 
+/** 
+ * Online Boost 
+ * A strong classifier which is trained online using 
+ * the algorithm proposed by Oza (<a 
+ * href="http://ti.arc.nasa.gov/m/profile/oza/b2hd-oza05.html">PDF</a>) 
+ *  
+ * @ingroup boostMIL
+ */
 class OnlineBoost: public StrongClassifier
 {
 private:

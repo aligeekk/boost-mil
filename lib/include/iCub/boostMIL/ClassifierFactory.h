@@ -41,7 +41,13 @@ namespace iCub
 namespace boostMIL
 {
 
-class ClassifierFactory {
+/** 
+ * Classifier Factory
+ *  
+ * @ingroup boostMIL
+ */
+class ClassifierFactory
+{
 protected:
     /**
      * The map that stores the key to object mapping.

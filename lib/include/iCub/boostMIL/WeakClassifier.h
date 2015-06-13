@@ -23,15 +23,6 @@
  * Online Multiple Instance Learning Boosting
  *
  * \author Carlo Ciliberto
- *  
- * \defgroup Weak Classifier
- *  
- * @ingroup boostMIL
- *
- * The basic element of boosting. A weak classifier is a binary function which takes an input X
- * and returns a positive (1) or negative (-1) output.
- *
- * \author Carlo Ciliberto
  * 
  * Copyright (C) 2010 RobotCub Consortium
  *
@@ -56,6 +47,14 @@ namespace boostMIL
 {
 
 
+/** 
+ * Weak Classifier 
+ * The basic element of boosting. A weak classifier is a binary 
+ * function which takes an input X and returns a positive (1) or 
+ * negative (-1) output. 
+ *  
+ * @ingroup boostMIL
+ */
 class WeakClassifier
 {
 protected:

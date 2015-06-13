@@ -17,14 +17,6 @@
 */
 
 /**
- * \defgroup Strong Classifier
- *  
- * @ingroup boostMIL
- *
- * The result of the training process. The strong classifier learns how to linearly combine the output of a 
- * family of weak classifiers in order to provide predictions for.
- *
- *
  * \author Carlo Ciliberto
  * 
  * Copyright (C) 2010 RobotCub Consortium
@@ -53,7 +45,14 @@ namespace boostMIL
 {
 
 
-
+/** 
+ * Strong Classifier 
+ * The result of the training process. The strong classifier 
+ * learns how to linearly combine the output of a family of weak
+ * classifiers in order to provide predictions for. 
+ *  
+ * @ingroup boostMIL
+ */
 class StrongClassifier: public WeakClassifier
 {
 protected:

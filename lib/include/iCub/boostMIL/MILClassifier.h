@@ -17,12 +17,6 @@
 */
 
 /**
- * \defgroup MIL Classifier
- *  
- * @ingroup boostMIL
- *
- * A weak classifier implementing the Multiple Instance Learning in an online boosting framework.
- *
  * \author Carlo Ciliberto
  * 
  * Copyright (C) 2010 RobotCub Consortium
@@ -51,6 +45,11 @@ namespace boostMIL
 
 
 
+/** 
+ * Bag
+ *  
+ * @ingroup boostMIL
+ */
 struct Bag
 {
     double      dist;
@@ -87,6 +86,13 @@ struct Bag
 };
 
 
+/** 
+ * MIL Classifier 
+ * A weak classifier implementing the Multiple Instance Learning 
+ * in an online boosting framework. 
+ *  
+ * @ingroup boostMIL
+ */
 class MILClassifier: public WeakClassifier
 {
 protected:
