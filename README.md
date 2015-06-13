@@ -8,7 +8,7 @@
 
 ### Documentation
 For online documentation of all the methods please refer to the
-[Doxygen Documentation](http://github.com/robotology/boost-mil).
+[Doxygen Documentation](http://robotology.github.com/boost-mil).
 
 
 ### License
