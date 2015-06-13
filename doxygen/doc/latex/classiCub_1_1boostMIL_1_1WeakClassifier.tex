@@ -1,0 +1,514 @@
+\section{i\+Cub\+:\+:boost\+M\+I\+L\+:\+:Weak\+Classifier Class Reference}
+\label{classiCub_1_1boostMIL_1_1WeakClassifier}\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+
+
+Weak Classifier The basic element of boosting.  
+
+
+
+
+{\ttfamily \#include $<$Weak\+Classifier.\+h$>$}
+
+Inheritance diagram for i\+Cub\+:\+:boost\+M\+I\+L\+:\+:Weak\+Classifier\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.607656cm]{classiCub_1_1boostMIL_1_1WeakClassifier}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a0eda1adfb456d3e5b39f8aed98516f21}{Weak\+Classifier} (const std\+::string \&\+\_\+type, yarp\+::os\+::\+Resource\+Finder \&\+\_\+resource)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a4c6473cb9a3347b6ade6f80af375cb82}{Weak\+Classifier} (const \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier} \&wc)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_ab43a4ceade45e30b7fed78a60333cbd5}{$\sim$\+Weak\+Classifier} ()\label{classiCub_1_1boostMIL_1_1WeakClassifier_ab43a4ceade45e30b7fed78a60333cbd5}
+
+\begin{DoxyCompactList}\small\item\em Virtual Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_ae5e3b28921109788e872ab6c035502f1}{clear} ()=0
+\begin{DoxyCompactList}\small\item\em Clear Method. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_aa5de990b0baac11f35f74493ca853ac5}{get\+Type} () const 
+\begin{DoxyCompactList}\small\item\em Returns the classifier type information. \end{DoxyCompactList}\item 
+double \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a525811a7380bcfd3cbc1edbe90e0842a}{get\+Error} () const 
+\begin{DoxyCompactList}\small\item\em Returns the current error exhibited by the classifier. \end{DoxyCompactList}\item 
+virtual std\+::list$<$ \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier} $\ast$ $>$ $\ast$ \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_abdf0b9bd48be536cd44939dc733097ed}{pack} (const Inputs $\ast$input) const 
+\begin{DoxyCompactList}\small\item\em Extract the input information relative to this classifier type and creates a list of Weak\+Classifiers from it. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a8f9de230214c99305df65010e5ddbe77}{error\+\_\+rate} (const std\+::list$<$ Inputs $\ast$ $>$ \&dataset)
+\begin{DoxyCompactList}\small\item\em Returns the error rate of the classifier over a given dataset assuming uniform weight distribution. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a294f03d21af03a5f96875562a5a979a0}{error\+\_\+rate} (const std\+::list$<$ Inputs $\ast$ $>$ \&dataset, const std\+::list$<$ double $>$ \&weights)
+\begin{DoxyCompactList}\small\item\em Returns the error rate of the classifier over a given dataset with specified weight distribution. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a980cd41ba074e3bdbfec697e7bee06f0}{to\+String} () const =0
+\begin{DoxyCompactList}\small\item\em Encodes the classifier in a single string. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_af7011a7e50ca01dea310c3d25fd3a84b}{from\+String} (const std\+::string \&str)=0
+\begin{DoxyCompactList}\small\item\em Loads a classifier from a string. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a63b742b5667a287ad2445c85c87714bb}{to\+Stream} (std\+::ofstream \&fout) const =0
+\begin{DoxyCompactList}\small\item\em Encodes the classifier in a single string. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_ab33627f7dd2c377635f653add1a55107}{from\+Stream} (std\+::ifstream \&fin)=0
+\begin{DoxyCompactList}\small\item\em Loads a classifier from a string. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a651a2028d05c812c061a770d1fbe45b7}{update} (const Inputs $\ast$input, double \&weight)=0
+\begin{DoxyCompactList}\small\item\em Updates the classifier with respect to an input with associated weight. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a58f22b59c3308ae58a5d8df4ea5026e1}{is\+Ready} ()=0
+\begin{DoxyCompactList}\small\item\em Updates the classifier and verifies if it is ready to be trained and to classify. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a8a3fe3145859ef045f4b7e3f1a61d984}{classify} (const Inputs $\ast$input, Output $\ast$output=N\+U\+L\+L) const =0
+\begin{DoxyCompactList}\small\item\em Classifies the given input. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a01b3c3834f0b0b81513ed49907bb2c16}{margin} (const Inputs $\ast$input, Output $\ast$output=N\+U\+L\+L) const 
+\begin{DoxyCompactList}\small\item\em Margin, in general it is the same as classify. \end{DoxyCompactList}\item 
+virtual \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier} $\ast$ \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a4857091405bd2d93966e4a47391b6e55}{create} () const =0\label{classiCub_1_1boostMIL_1_1WeakClassifier_a4857091405bd2d93966e4a47391b6e55}
+
+\begin{DoxyCompactList}\small\item\em Virtual Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+yarp\+::os\+::\+Resource\+Finder \& \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a5a7df0cc2cbb505e5b40dd59d3a4933b}{resource}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a5a7df0cc2cbb505e5b40dd59d3a4933b}
+
+\begin{DoxyCompactList}\small\item\em Resource containing the parameters information. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a6e08c26ea2e12086317d6cdd0f65bbd9}{type}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a6e08c26ea2e12086317d6cdd0f65bbd9}
+
+\begin{DoxyCompactList}\small\item\em The type associated to the \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier}. \end{DoxyCompactList}\item 
+double \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_afa9e7bb9b9a92d349b40a4f127386a59}{error}\label{classiCub_1_1boostMIL_1_1WeakClassifier_afa9e7bb9b9a92d349b40a4f127386a59}
+
+\begin{DoxyCompactList}\small\item\em Last computed error. \end{DoxyCompactList}\item 
+bool \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a7fe5fe3366a82def4031c16a9a278350}{ready}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a7fe5fe3366a82def4031c16a9a278350}
+
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier} has been initialized. \end{DoxyCompactList}\item 
+bool \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a63a5602437f6936da17e33ca4d89976a}{verbose}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a63a5602437f6936da17e33ca4d89976a}
+
+\begin{DoxyCompactList}\small\item\em Allows prints by the boost\+M\+I\+L library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Weak Classifier The basic element of boosting. 
+
+A weak classifier is a binary function which takes an input X and returns a positive (1) or negative (-\/1) output. 
+
+Definition at line 58 of file Weak\+Classifier.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!Weak\+Classifier@{Weak\+Classifier}}
+\index{Weak\+Classifier@{Weak\+Classifier}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{Weak\+Classifier}]{\setlength{\rightskip}{0pt plus 5cm}i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::\+Weak\+Classifier (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{\+\_\+type, }
+\item[{yarp\+::os\+::\+Resource\+Finder \&}]{\+\_\+resource}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a0eda1adfb456d3e5b39f8aed98516f21}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+type} & type of the classifier. It is needed to associate particular inputs and to clone via the \hyperlink{classiCub_1_1boostMIL_1_1ClassifierFactory}{Classifier\+Factory}. \\
+\hline
+{\em \+\_\+resource} & container for the classifier parameters. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 104 of file Weak\+Classifier.\+h.
+
+
+\begin{DoxyCode}
+105       :type(\_type),resource(\_resource)
+106     \{\}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!Weak\+Classifier@{Weak\+Classifier}}
+\index{Weak\+Classifier@{Weak\+Classifier}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{Weak\+Classifier}]{\setlength{\rightskip}{0pt plus 5cm}i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::\+Weak\+Classifier (
+\begin{DoxyParamCaption}
+\item[{const {\bf Weak\+Classifier} \&}]{wc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a4c6473cb9a3347b6ade6f80af375cb82}
+
+
+Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wc} & the \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier} from which the copy is instantiated. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 113 of file Weak\+Classifier.\+h.
+
+
+\begin{DoxyCode}
+114         :type(wc.type),resource(wc.resource)
+115     \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!classify@{classify}}
+\index{classify@{classify}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{classify}]{\setlength{\rightskip}{0pt plus 5cm}virtual int i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::classify (
+\begin{DoxyParamCaption}
+\item[{const Inputs $\ast$}]{input, }
+\item[{Output $\ast$}]{output = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a8a3fe3145859ef045f4b7e3f1a61d984}
+
+
+Classifies the given input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & the input to classify. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1,-\/1 or 0 if the classifier classifies the input (respectively)\+: positive, negative or undetermined (e.\+g. the classifier is not ready to classify yet). 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classiCub_1_1boostMIL_1_1AvgClassifier_aa843a13c666b5ef24fbceb1245d0b3e7}{i\+Cub\+::boost\+M\+I\+L\+::\+Avg\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1MILClassifier_a06504e464b445939f28d82a36faaf3c1}{i\+Cub\+::boost\+M\+I\+L\+::\+M\+I\+L\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1SelectorClassifier_a42a5f96736e09016e3b1e5ed89bac461}{i\+Cub\+::boost\+M\+I\+L\+::\+Selector\+Classifier}, and \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a1fee2d421c908292846b6e7356c7c6d1}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}.
+
+
+
+Referenced by error\+\_\+rate(), margin(), and i\+Cub\+::boost\+M\+I\+L\+::\+Ada\+Boost\+::train().
+
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!clear@{clear}}
+\index{clear@{clear}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}virtual void i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_ae5e3b28921109788e872ab6c035502f1}
+
+
+Clear Method. 
+
+Returns the classifier to its original condition (Pre-\/initialization). 
+
+Implemented in \hyperlink{classiCub_1_1boostMIL_1_1AvgClassifier_a41e88fc8ff3b1ded52e0b2e9676fed96}{i\+Cub\+::boost\+M\+I\+L\+::\+Avg\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1MILClassifier_a39e02e74a674db1377a0a443700d0931}{i\+Cub\+::boost\+M\+I\+L\+::\+M\+I\+L\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1OnlineSupport_a89690fa5f4c74c09f24a39593261090a}{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Support}, \hyperlink{classiCub_1_1boostMIL_1_1SelectorClassifier_a702a26c0681aae7baa727f633a97c55e}{i\+Cub\+::boost\+M\+I\+L\+::\+Selector\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a7b725fb242d59067afce0030f6f8d259}{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}, \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a01b6ff00adc73d01d1b6ebca017a8014}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}, and \hyperlink{classiCub_1_1boostMIL_1_1AdaBoost_ad371e92c03334ab33b2866b0a2eaab4b}{i\+Cub\+::boost\+M\+I\+L\+::\+Ada\+Boost}.
+
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!error\+\_\+rate@{error\+\_\+rate}}
+\index{error\+\_\+rate@{error\+\_\+rate}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{error\+\_\+rate}]{\setlength{\rightskip}{0pt plus 5cm}virtual double i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::error\+\_\+rate (
+\begin{DoxyParamCaption}
+\item[{const std\+::list$<$ Inputs $\ast$ $>$ \&}]{dataset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a8f9de230214c99305df65010e5ddbe77}
+
+
+Returns the error rate of the classifier over a given dataset assuming uniform weight distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataset} & the datataset over which compute the error rate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the error rate. 
+\end{DoxyReturn}
+
+
+Definition at line 158 of file Weak\+Classifier.\+h.
+
+
+\begin{DoxyCode}
+159     \{
+160         std::list<double> weights(dataset.size(),1.0/dataset.size());
+161         \textcolor{keywordflow}{return} error_rate(dataset,weights);
+162     \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!error\+\_\+rate@{error\+\_\+rate}}
+\index{error\+\_\+rate@{error\+\_\+rate}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{error\+\_\+rate}]{\setlength{\rightskip}{0pt plus 5cm}virtual double i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::error\+\_\+rate (
+\begin{DoxyParamCaption}
+\item[{const std\+::list$<$ Inputs $\ast$ $>$ \&}]{dataset, }
+\item[{const std\+::list$<$ double $>$ \&}]{weights}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a294f03d21af03a5f96875562a5a979a0}
+
+
+Returns the error rate of the classifier over a given dataset with specified weight distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataset} & the datataset over which compute the error rate. \\
+\hline
+{\em weights} & the weight distribution over the given dataset. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the error rate. 
+\end{DoxyReturn}
+
+
+Definition at line 171 of file Weak\+Classifier.\+h.
+
+
+
+References classify().
+
+
+\begin{DoxyCode}
+172     \{
+173         \textcolor{keywordtype}{double} e = 0.0;
+174         std::list<Inputs*>   ::const\_iterator d\_itr = dataset.begin();
+175         std::list<double>    ::const\_iterator w\_itr = weights.begin();
+176         \textcolor{keywordflow}{while}(d\_itr != dataset.begin())
+177         \{
+178             \textcolor{keywordflow}{if}(classify(*d\_itr) != (*d\_itr)->getLabel())
+179                 e += *w\_itr;
+180             d\_itr++;
+181         \}
+182         \textcolor{keywordflow}{return} e;
+183     \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!from\+Stream@{from\+Stream}}
+\index{from\+Stream@{from\+Stream}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{from\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}virtual void i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::from\+Stream (
+\begin{DoxyParamCaption}
+\item[{std\+::ifstream \&}]{fin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_ab33627f7dd2c377635f653add1a55107}
+
+
+Loads a classifier from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & string encoding the classifier to be loaded \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a64bcbc003a3fcde2bd8f20cc98f4d71b}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1MILClassifier_a140a4086c3032e55a6efd6ebf2f486aa}{i\+Cub\+::boost\+M\+I\+L\+::\+M\+I\+L\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1AvgClassifier_a924700fb2f5924e6a68a65cf827cf5f5}{i\+Cub\+::boost\+M\+I\+L\+::\+Avg\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1OnlineSupport_a6f160fca47748fd00c99daf7a842304c}{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Support}, \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a4258aee4c77ab8633765167389c30fbb}{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}, and \hyperlink{classiCub_1_1boostMIL_1_1SelectorClassifier_a3a72f4d8f8d1f6403ebec95dd4b14213}{i\+Cub\+::boost\+M\+I\+L\+::\+Selector\+Classifier}.
+
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!from\+String@{from\+String}}
+\index{from\+String@{from\+String}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{from\+String}]{\setlength{\rightskip}{0pt plus 5cm}virtual void i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::from\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_af7011a7e50ca01dea310c3d25fd3a84b}
+
+
+Loads a classifier from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & string encoding the classifier to be loaded \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_abdfebbfe702c289e2841a26835e8d46f}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1AvgClassifier_af820cbae5ef07d597d568597bf09d534}{i\+Cub\+::boost\+M\+I\+L\+::\+Avg\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1OnlineSupport_afb3af9ffed757a5bcd8f03d2c50695b0}{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Support}, \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a3c72a282cb86a650eac248f03064bea5}{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}, \hyperlink{classiCub_1_1boostMIL_1_1MILClassifier_a96d16be5ffa0f61d038cb3270133fbd7}{i\+Cub\+::boost\+M\+I\+L\+::\+M\+I\+L\+Classifier}, and \hyperlink{classiCub_1_1boostMIL_1_1SelectorClassifier_a7eaf53adea674977466a8b71f0d7ab78}{i\+Cub\+::boost\+M\+I\+L\+::\+Selector\+Classifier}.
+
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!get\+Error@{get\+Error}}
+\index{get\+Error@{get\+Error}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{get\+Error}]{\setlength{\rightskip}{0pt plus 5cm}double i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::get\+Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a525811a7380bcfd3cbc1edbe90e0842a}
+
+
+Returns the current error exhibited by the classifier. 
+
+\begin{DoxyReturn}{Returns}
+the current error. 
+\end{DoxyReturn}
+
+
+Definition at line 140 of file Weak\+Classifier.\+h.
+
+
+
+References error.
+
+
+
+Referenced by i\+Cub\+::boost\+M\+I\+L\+::\+Ada\+Boost\+::train(), and i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost\+::update().
+
+
+\begin{DoxyCode}
+140 \{\textcolor{keywordflow}{return} error;\}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{get\+Type}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_aa5de990b0baac11f35f74493ca853ac5}
+
+
+Returns the classifier type information. 
+
+\begin{DoxyReturn}{Returns}
+the type of the classifier 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file Weak\+Classifier.\+h.
+
+
+
+References type.
+
+
+
+Referenced by i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory\+::register\+Classifier(), i\+Cub\+::boost\+M\+I\+L\+::\+Selector\+Classifier\+::to\+Stream(), i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost\+::to\+Stream(), i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Support\+::to\+Stream(), i\+Cub\+::boost\+M\+I\+L\+::\+Avg\+Classifier\+::to\+Stream(), and i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::to\+Stream().
+
+
+\begin{DoxyCode}
+133 \{\textcolor{keywordflow}{return} type;\}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!is\+Ready@{is\+Ready}}
+\index{is\+Ready@{is\+Ready}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{is\+Ready}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::is\+Ready (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a58f22b59c3308ae58a5d8df4ea5026e1}
+
+
+Updates the classifier and verifies if it is ready to be trained and to classify. 
+
+\begin{DoxyReturn}{Returns}
+true if and only if the classifier is ready. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classiCub_1_1boostMIL_1_1AvgClassifier_a18686e10e582a3e614f5748825434081}{i\+Cub\+::boost\+M\+I\+L\+::\+Avg\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a406ccd141599b0d3c8b6dd9de6a358ba}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1MILClassifier_abba1ac0b9c33c01e843ca6f4cc7e0729}{i\+Cub\+::boost\+M\+I\+L\+::\+M\+I\+L\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1OnlineSupport_a73b90fb8ac2d79c05a66cbea4367d378}{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Support}, \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a672bc56c42b3b4aa9bde7ac52d0ace5f}{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}, \hyperlink{classiCub_1_1boostMIL_1_1AdaBoost_a65614f8cdb3aed3aa74a7a8ac829ab83}{i\+Cub\+::boost\+M\+I\+L\+::\+Ada\+Boost}, and \hyperlink{classiCub_1_1boostMIL_1_1SelectorClassifier_a441bfc6afb9b3b53d57823b2a8539dba}{i\+Cub\+::boost\+M\+I\+L\+::\+Selector\+Classifier}.
+
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!margin@{margin}}
+\index{margin@{margin}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{margin}]{\setlength{\rightskip}{0pt plus 5cm}virtual double i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::margin (
+\begin{DoxyParamCaption}
+\item[{const Inputs $\ast$}]{input, }
+\item[{Output $\ast$}]{output = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a01b3c3834f0b0b81513ed49907bb2c16}
+
+
+Margin, in general it is the same as classify. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & the input to classify. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1,-\/1 or 0 if the classifier classifies the input (respectively)\+: positive, negative or undetermined (e.\+g. the classifier is not ready to classify yet). 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classiCub_1_1boostMIL_1_1OnlineSupport_a9b6273a8d6a7d19816806a6072d233a4}{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Support}, \hyperlink{classiCub_1_1boostMIL_1_1AvgClassifier_a9b4b32754ae278c07406da91ddc0ece7}{i\+Cub\+::boost\+M\+I\+L\+::\+Avg\+Classifier}, and \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_acd33ed5cc98ed84a61e27b41eec63c5c}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}.
+
+
+
+Definition at line 249 of file Weak\+Classifier.\+h.
+
+
+
+References classify().
+
+
+\begin{DoxyCode}
+250     \{
+251         \textcolor{keywordflow}{return} classify(input,output);
+252     \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!pack@{pack}}
+\index{pack@{pack}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{pack}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::list$<${\bf Weak\+Classifier}$\ast$$>$$\ast$ i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::pack (
+\begin{DoxyParamCaption}
+\item[{const Inputs $\ast$}]{input}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_abdf0b9bd48be536cd44939dc733097ed}
+
+
+Extract the input information relative to this classifier type and creates a list of Weak\+Classifiers from it. 
+
+Used for online methods to create the space of hypothesys directly from training data. Usually returns a null pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & the input from which extract the Weak\+Classifiers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list of pointers to the Weak\+Classifiers extracted from the input. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classiCub_1_1boostMIL_1_1MILClassifier_afc4a13e10568201a963701b8e983ccd7}{i\+Cub\+::boost\+M\+I\+L\+::\+M\+I\+L\+Classifier}.
+
+
+
+Definition at line 150 of file Weak\+Classifier.\+h.
+
+
+\begin{DoxyCode}
+150 \{\textcolor{keywordflow}{return} NULL;\}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!to\+Stream@{to\+Stream}}
+\index{to\+Stream@{to\+Stream}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{to\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}virtual void i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::to\+Stream (
+\begin{DoxyParamCaption}
+\item[{std\+::ofstream \&}]{fout}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a63b742b5667a287ad2445c85c87714bb}
+
+
+Encodes the classifier in a single string. 
+
+
+
+Implemented in \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a5f8724e7d8cffd11e4128087c4c18412}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1AvgClassifier_ad02e72d71dbcc0abc2898752b57c3be1}{i\+Cub\+::boost\+M\+I\+L\+::\+Avg\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1MILClassifier_a9c9067f6678dfb2ec83bd2945e403edf}{i\+Cub\+::boost\+M\+I\+L\+::\+M\+I\+L\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1OnlineSupport_a7d2c5146240c9cac93cdfa054d960c07}{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Support}, \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a873e5570c055fa6ca09e0ef23b034945}{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}, and \hyperlink{classiCub_1_1boostMIL_1_1SelectorClassifier_af01d7ef99e40d7e9de4ec9938640793d}{i\+Cub\+::boost\+M\+I\+L\+::\+Selector\+Classifier}.
+
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a980cd41ba074e3bdbfec697e7bee06f0}
+
+
+Encodes the classifier in a single string. 
+
+\begin{DoxyReturn}{Returns}
+a string encoding the current classifier form 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_adb838aab38a5503330b4335c2b4d7a0f}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1AvgClassifier_aaaaf59125fa1f18075bc70e822b1055c}{i\+Cub\+::boost\+M\+I\+L\+::\+Avg\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1MILClassifier_a9d32fbaf8d24e488e944f3382ff45937}{i\+Cub\+::boost\+M\+I\+L\+::\+M\+I\+L\+Classifier}, and \hyperlink{classiCub_1_1boostMIL_1_1SelectorClassifier_ab3f8bd70de704b21464496c8d9621dd4}{i\+Cub\+::boost\+M\+I\+L\+::\+Selector\+Classifier}.
+
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}!update@{update}}
+\index{update@{update}!i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier@{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::update (
+\begin{DoxyParamCaption}
+\item[{const Inputs $\ast$}]{input, }
+\item[{double \&}]{weight}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a651a2028d05c812c061a770d1fbe45b7}
+
+
+Updates the classifier with respect to an input with associated weight. 
+
+Usually an online method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & the input. \\
+\hline
+{\em the} & relevance weight associated to the given input. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classiCub_1_1boostMIL_1_1AvgClassifier_ab6da9e17e44ee65c40b854b2d4ff4a52}{i\+Cub\+::boost\+M\+I\+L\+::\+Avg\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1MILClassifier_a8417e89679c2e9f68cd3093e2de7ba7e}{i\+Cub\+::boost\+M\+I\+L\+::\+M\+I\+L\+Classifier}, \hyperlink{classiCub_1_1boostMIL_1_1OnlineSupport_a534fa475c6a1f492e05bd5cbcf858acb}{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Support}, \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a4309a08bf487eaaf911a1977deed8086}{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}, \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_aabb7f754e938b0529147e55d72c7a66c}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}, and \hyperlink{classiCub_1_1boostMIL_1_1SelectorClassifier_a8bb80c44b2cb9ef79eb066f2f08e5c4f}{i\+Cub\+::boost\+M\+I\+L\+::\+Selector\+Classifier}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/dev/icub-\/contrib-\/iit/boost-\/mil/lib/include/i\+Cub/boost\+M\+I\+L/Weak\+Classifier.\+h\end{DoxyCompactItemize}

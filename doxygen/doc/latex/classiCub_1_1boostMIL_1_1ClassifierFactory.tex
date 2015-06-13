@@ -1,0 +1,187 @@
+\section{i\+Cub\+:\+:boost\+M\+I\+L\+:\+:Classifier\+Factory Class Reference}
+\label{classiCub_1_1boostMIL_1_1ClassifierFactory}\index{i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory@{i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory}}
+
+
+Classifier Factory.  
+
+
+
+
+{\ttfamily \#include $<$Classifier\+Factory.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classiCub_1_1boostMIL_1_1ClassifierFactory_ad1ef37e6ca57c3c04ebf69c170d864ac}{register\+Classifier} (\hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Registers a prototype object that can be used to create clones. \end{DoxyCompactList}\item 
+\hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier} $\ast$ \hyperlink{classiCub_1_1boostMIL_1_1ClassifierFactory_a995c41f25cf812e19a9dfbf9150fcb54}{create} (const std\+::string \&type) const 
+\begin{DoxyCompactList}\small\item\em Creates a new object given a specific type of key. \end{DoxyCompactList}\item 
+void {\bfseries pack} (const Inputs $\ast$input, std\+::deque$<$ \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier} $\ast$ $>$ \&function\+\_\+space)\label{classiCub_1_1boostMIL_1_1ClassifierFactory_a2e2c8bd88e304ad5e83f2f56fa622cfb}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classiCub_1_1boostMIL_1_1ClassifierFactory}{Classifier\+Factory} \& \hyperlink{classiCub_1_1boostMIL_1_1ClassifierFactory_aaae3074fda41925b058b2865a0b9b054}{instance} ()
+\begin{DoxyCompactList}\small\item\em An instance retrieval method that follows the Singleton pattern. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier} $\ast$ $>$ \hyperlink{classiCub_1_1boostMIL_1_1ClassifierFactory_a7c8ecadf166accd6b1daaf4b8a5fd4bb}{map}\label{classiCub_1_1boostMIL_1_1ClassifierFactory_a7c8ecadf166accd6b1daaf4b8a5fd4bb}
+
+\begin{DoxyCompactList}\small\item\em The map that stores the key to object mapping. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classifier Factory. 
+
+Definition at line 49 of file Classifier\+Factory.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory@{i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory}!create@{create}}
+\index{create@{create}!i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory@{i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Weak\+Classifier}$\ast$ i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory\+::create (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{type}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classiCub_1_1boostMIL_1_1ClassifierFactory_a995c41f25cf812e19a9dfbf9150fcb54}
+
+
+Creates a new object given a specific type of key. 
+
+The receiving end takes ownership of the returned pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & a key that identifies the type of machine \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a copied object of the specified type 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime} & error if no object has been registered with the same key \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 140 of file Classifier\+Factory.\+h.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::create().
+
+
+
+Referenced by i\+Cub\+::boost\+M\+I\+L\+::\+Selector\+Classifier\+::from\+Stream(), i\+Cub\+::boost\+M\+I\+L\+::\+Avg\+Classifier\+::from\+Stream(), and i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::from\+Stream().
+
+
+\begin{DoxyCode}
+141     \{
+142         \textcolor{keywordflow}{if}(this->map.count(type) == 0) 
+143         \{
+144             std::ostringstream buffer;
+145             buffer << \textcolor{stringliteral}{"Could not find prototype '"} << type
+146                    << \textcolor{stringliteral}{"'; please specify a valid key."};
+147             \textcolor{keywordflow}{throw} std::runtime\_error(buffer.str());
+148         \}
+149 
+150         \textcolor{keywordflow}{return} this->map.find(type)->second->create();
+151     \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory@{i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory}!instance@{instance}}
+\index{instance@{instance}!i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory@{i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Classifier\+Factory}\& i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classiCub_1_1boostMIL_1_1ClassifierFactory_aaae3074fda41925b058b2865a0b9b054}
+
+
+An instance retrieval method that follows the Singleton pattern. 
+
+Note that this implementation should not be considered thread safe and that problems may arise. However, due to the nature of the expected use this will not be likely to result in problems.
+
+See \href{http://www.oaklib.org/docs/oak/singleton.html}{\tt http\+://www.\+oaklib.\+org/docs/oak/singleton.\+html} for more information.
+
+\begin{DoxyReturn}{Returns}
+the singleton factory instance 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file Classifier\+Factory.\+h.
+
+
+
+Referenced by i\+Cub\+::boost\+M\+I\+L\+::\+Selector\+Classifier\+::from\+Stream(), i\+Cub\+::boost\+M\+I\+L\+::\+Avg\+Classifier\+::from\+Stream(), i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::from\+Stream(), i\+Cub\+::boost\+M\+I\+L\+::\+Selector\+Classifier\+::from\+String(), i\+Cub\+::boost\+M\+I\+L\+::\+Avg\+Classifier\+::from\+String(), i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::from\+String(), i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost\+::initialize(), i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Support\+::initialize(), i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost\+::update(), and i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Support\+::update().
+
+
+\begin{DoxyCode}
+97                                          \{
+98         \textcolor{keyword}{static} ClassifierFactory instance;
+99         \textcolor{keywordflow}{return} instance;
+100     \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory@{i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory}!register\+Classifier@{register\+Classifier}}
+\index{register\+Classifier@{register\+Classifier}!i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory@{i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory}}
+\subsubsection[{register\+Classifier}]{\setlength{\rightskip}{0pt plus 5cm}void i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory\+::register\+Classifier (
+\begin{DoxyParamCaption}
+\item[{{\bf Weak\+Classifier} $\ast$}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classiCub_1_1boostMIL_1_1ClassifierFactory_ad1ef37e6ca57c3c04ebf69c170d864ac}
+
+
+Registers a prototype object that can be used to create clones. 
+
+Strictly speaking, for this application the object only has to be able to return a new object of its own type, regardless of the internal state of that object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em prototype} & the prototype object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime} & error if the name of the prototype is empty \\
+\hline
+{\em runtime} & error if another object is registered with the same name \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 112 of file Classifier\+Factory.\+h.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::get\+Type().
+
+
+\begin{DoxyCode}
+112                                                \{
+113         assert(h != (WeakClassifier*) 0);
+114 
+115         \textcolor{keywordflow}{if}(h->getType() == \textcolor{stringliteral}{""}) \{
+116             \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"Cannot register classifier with empty type; please specify a unique
+       key."});
+117         \}
+118 
+119         \textcolor{keywordflow}{if}(this->map.count(h->getType()) > 0) \{
+120             std::ostringstream buffer;
+121             buffer << \textcolor{stringliteral}{"WeakClassifier of type '"} << h->getType()
+122                    << \textcolor{stringliteral}{"' has already been registered; please specify a unique key."};
+123             \textcolor{keywordflow}{throw} std::runtime\_error(buffer.str());
+124         \}
+125 
+126         this->map[h->getType()] = h;
+127 
+128         std::map<std::string,WeakClassifier*>::iterator itr = map.begin();
+129     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/dev/icub-\/contrib-\/iit/boost-\/mil/lib/include/i\+Cub/boost\+M\+I\+L/Classifier\+Factory.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,1257 @@
+\section{i\+Cub\+:\+:boost\+M\+I\+L\+:\+:Online\+Boost Class Reference}
+\label{classiCub_1_1boostMIL_1_1OnlineBoost}\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+
+
+Online Boost A strong classifier which is trained online using the algorithm proposed by Oza (\href{http://ti.arc.nasa.gov/m/profile/oza/b2hd-oza05.html}{\tt P\+D\+F})  
+
+
+
+
+{\ttfamily \#include $<$Online\+Boost.\+h$>$}
+
+Inheritance diagram for i\+Cub\+:\+:boost\+M\+I\+L\+:\+:Online\+Boost\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classiCub_1_1boostMIL_1_1OnlineBoost}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a92fc331c60f7608c0d321ecf57a113ac}{Online\+Boost} (yarp\+::os\+::\+Resource\+Finder \&\+\_\+resource)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a1eadaa74d501594cbea6bdb243fd111b}{Online\+Boost} (const int \&\+\_\+type, yarp\+::os\+::\+Resource\+Finder \&\+\_\+resource)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_afbf710e0e9455a5b0215e998c3c33acd}{Online\+Boost} (const std\+::string \&\+\_\+type, yarp\+::os\+::\+Resource\+Finder \&\+\_\+resource)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_ab631701e7e889e994e589ef0da88263e}{$\sim$\+Online\+Boost} ()\label{classiCub_1_1boostMIL_1_1OnlineBoost_ab631701e7e889e994e589ef0da88263e}
+
+\begin{DoxyCompactList}\small\item\em Virtual Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a7b725fb242d59067afce0030f6f8d259}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clear Method. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a672bc56c42b3b4aa9bde7ac52d0ace5f}{is\+Ready} ()
+\begin{DoxyCompactList}\small\item\em Updates the classifier and verifies if it is ready to be trained and to classify. \end{DoxyCompactList}\item 
+virtual \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost}{Online\+Boost} $\ast$ \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a843c5639ff6ddb094eb6b1e0d1a09a67}{create} () const \label{classiCub_1_1boostMIL_1_1OnlineBoost_a843c5639ff6ddb094eb6b1e0d1a09a67}
+
+\begin{DoxyCompactList}\small\item\em Virtual Constructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_afdeb1621efc90c5701f190404aa9b4c4}{initialize} (const Inputs $\ast$initializer)
+\begin{DoxyCompactList}\small\item\em Initializes the online classifier with a bag of positive weak classifiers. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a92965b42f03b4d597d8fad1639c147c8}{initialize} (const std\+::list$<$ Inputs $\ast$ $>$ \&initializer)
+\begin{DoxyCompactList}\small\item\em Initializes the online classifier with a list of bags of positive weak classifiers. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a873e5570c055fa6ca09e0ef23b034945}{to\+Stream} (std\+::ofstream \&fout) const 
+\begin{DoxyCompactList}\small\item\em Encodes the classifier in a single string. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a4258aee4c77ab8633765167389c30fbb}{from\+Stream} (std\+::ifstream \&str)
+\begin{DoxyCompactList}\small\item\em Loads a classifier from a string. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a3c72a282cb86a650eac248f03064bea5}{from\+String} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Loads a classifier from a string. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a469d7d76a9cf53974b8b8b8c4b89e610}{clear\+Function\+Space} ()\label{classiCub_1_1boostMIL_1_1OnlineBoost_a469d7d76a9cf53974b8b8b8c4b89e610}
+
+\begin{DoxyCompactList}\small\item\em Clears the function space. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a4309a08bf487eaaf911a1977deed8086}{update} (const Inputs $\ast$input, double \&weight)
+\begin{DoxyCompactList}\small\item\em Updates the classifier with respect to an input with associated weight. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_ac041211afdfcdb4212c01e1bbcfe8ad9}{train} (const std\+::list$<$ Inputs $\ast$ $>$ \&training\+\_\+set)
+\begin{DoxyCompactList}\small\item\em Trains the classifier with respect to a list of inputs. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_a70417657e5af5c133a824be77cdc7725}{train} (const Inputs $\ast$input, double weight=1.\+0)
+\begin{DoxyCompactList}\small\item\em Trains the classifier with respect to a single input. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classiCub_1_1boostMIL_1_1OnlineBoost_aab39922f8637b15d5cfbfb8aaf3cf239}{randomize\+Func\+Space} ()
+\begin{DoxyCompactList}\small\item\em Randomizes the function space. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a99285415c37a3f1271c8afb2b5e3ae94}{get\+Size} ()\label{classiCub_1_1boostMIL_1_1StrongClassifier_a99285415c37a3f1271c8afb2b5e3ae94}
+
+\begin{DoxyCompactList}\small\item\em Returns the current size of the List of Weak\+Classifiers. \end{DoxyCompactList}\item 
+double \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_acd33ed5cc98ed84a61e27b41eec63c5c}{margin} (const Inputs $\ast$input, Output $\ast$output=N\+U\+L\+L) const 
+\begin{DoxyCompactList}\small\item\em Computes the margin of the given input. \end{DoxyCompactList}\item 
+void \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_acdfb5551c7b9315ab4077566809064fc}{print\+Alphas} (F\+I\+L\+E $\ast$f)
+\begin{DoxyCompactList}\small\item\em Prints the weights of all classifiers on a file. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a1fee2d421c908292846b6e7356c7c6d1}{classify} (const Inputs $\ast$input, Output $\ast$output=N\+U\+L\+L) const 
+\begin{DoxyCompactList}\small\item\em Classifies the given input. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_adb838aab38a5503330b4335c2b4d7a0f}{to\+String} () const 
+\begin{DoxyCompactList}\small\item\em Encodes the classifier in a single string. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_ab92075af6f373b770f723e1289fca780}{save\+As\+String} (const std\+::string \&path) const 
+\begin{DoxyCompactList}\small\item\em Saves the strong classifier in a single string. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_aa3dafb8b823e28e200ce97ec81676667}{load\+As\+String} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Loads a previously saved strong classifier. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_ac812325b217d16e1e3c469e5d4a9eb76}{save} (const std\+::string \&path) const 
+\begin{DoxyCompactList}\small\item\em Saves the strong classifier. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a3678df5fef278e2a2e6ceabb4c82f81b}{load} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Loads a previously saved strong classifier. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_aa5de990b0baac11f35f74493ca853ac5}{get\+Type} () const 
+\begin{DoxyCompactList}\small\item\em Returns the classifier type information. \end{DoxyCompactList}\item 
+double \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a525811a7380bcfd3cbc1edbe90e0842a}{get\+Error} () const 
+\begin{DoxyCompactList}\small\item\em Returns the current error exhibited by the classifier. \end{DoxyCompactList}\item 
+virtual std\+::list$<$ \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier} $\ast$ $>$ $\ast$ \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_abdf0b9bd48be536cd44939dc733097ed}{pack} (const Inputs $\ast$input) const 
+\begin{DoxyCompactList}\small\item\em Extract the input information relative to this classifier type and creates a list of Weak\+Classifiers from it. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a8f9de230214c99305df65010e5ddbe77}{error\+\_\+rate} (const std\+::list$<$ Inputs $\ast$ $>$ \&dataset)
+\begin{DoxyCompactList}\small\item\em Returns the error rate of the classifier over a given dataset assuming uniform weight distribution. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a294f03d21af03a5f96875562a5a979a0}{error\+\_\+rate} (const std\+::list$<$ Inputs $\ast$ $>$ \&dataset, const std\+::list$<$ double $>$ \&weights)
+\begin{DoxyCompactList}\small\item\em Returns the error rate of the classifier over a given dataset with specified weight distribution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier} $\ast$ $>$ \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a24965a63cb180092a38d6e7f6274b045}{weak\+\_\+classifiers}\label{classiCub_1_1boostMIL_1_1StrongClassifier_a24965a63cb180092a38d6e7f6274b045}
+
+\begin{DoxyCompactList}\small\item\em List of the Weak\+Classifiers contributing the decision function of the \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier}{Strong\+Classifier}. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a08d8327878ca52050f85f87b21d727fc}{alphas}\label{classiCub_1_1boostMIL_1_1StrongClassifier_a08d8327878ca52050f85f87b21d727fc}
+
+\begin{DoxyCompactList}\small\item\em List of relevance weight for the \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier} contributing the decision function of the \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier}{Strong\+Classifier}. \end{DoxyCompactList}\item 
+std\+::deque$<$ \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier} $\ast$ $>$ \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a6814b77760d7e6cd6b164c5ce7a3828e}{function\+\_\+space}\label{classiCub_1_1boostMIL_1_1StrongClassifier_a6814b77760d7e6cd6b164c5ce7a3828e}
+
+\begin{DoxyCompactList}\small\item\em List of Weak\+Classifiers available to train the \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier}{Strong\+Classifier}. \end{DoxyCompactList}\item 
+yarp\+::os\+::\+Resource\+Finder \& \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a5a7df0cc2cbb505e5b40dd59d3a4933b}{resource}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a5a7df0cc2cbb505e5b40dd59d3a4933b}
+
+\begin{DoxyCompactList}\small\item\em Resource containing the parameters information. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a6e08c26ea2e12086317d6cdd0f65bbd9}{type}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a6e08c26ea2e12086317d6cdd0f65bbd9}
+
+\begin{DoxyCompactList}\small\item\em The type associated to the \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier}. \end{DoxyCompactList}\item 
+double \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_afa9e7bb9b9a92d349b40a4f127386a59}{error}\label{classiCub_1_1boostMIL_1_1WeakClassifier_afa9e7bb9b9a92d349b40a4f127386a59}
+
+\begin{DoxyCompactList}\small\item\em Last computed error. \end{DoxyCompactList}\item 
+bool \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a7fe5fe3366a82def4031c16a9a278350}{ready}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a7fe5fe3366a82def4031c16a9a278350}
+
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier}{Weak\+Classifier} has been initialized. \end{DoxyCompactList}\item 
+bool \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a63a5602437f6936da17e33ca4d89976a}{verbose}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a63a5602437f6936da17e33ca4d89976a}
+
+\begin{DoxyCompactList}\small\item\em Allows prints by the boost\+M\+I\+L library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Online Boost A strong classifier which is trained online using the algorithm proposed by Oza (\href{http://ti.arc.nasa.gov/m/profile/oza/b2hd-oza05.html}{\tt P\+D\+F}) 
+
+Definition at line 51 of file Online\+Boost.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!Online\+Boost@{Online\+Boost}}
+\index{Online\+Boost@{Online\+Boost}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{Online\+Boost}]{\setlength{\rightskip}{0pt plus 5cm}Online\+Boost\+::\+Online\+Boost (
+\begin{DoxyParamCaption}
+\item[{yarp\+::os\+::\+Resource\+Finder \&}]{\+\_\+resource}
+\end{DoxyParamCaption}
+)}\label{classiCub_1_1boostMIL_1_1OnlineBoost_a92fc331c60f7608c0d321ecf57a113ac}
+
+
+Constructor. 
+
+It assumes that the name of the Strong Classifier is \textquotesingle{}online\+\_\+boost\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+resource} & container for the classifier parameters. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file Online\+Boost.\+cpp.
+
+
+\begin{DoxyCode}
+41     :StrongClassifier(\textcolor{stringliteral}{"online\_boost"},\_resource)
+42 \{
+43     initResource();
+44 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!Online\+Boost@{Online\+Boost}}
+\index{Online\+Boost@{Online\+Boost}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{Online\+Boost}]{\setlength{\rightskip}{0pt plus 5cm}i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost\+::\+Online\+Boost (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{\+\_\+type, }
+\item[{yarp\+::os\+::\+Resource\+Finder \&}]{\+\_\+resource}
+\end{DoxyParamCaption}
+)}\label{classiCub_1_1boostMIL_1_1OnlineBoost_a1eadaa74d501594cbea6bdb243fd111b}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+type} & type of the classifier. It is needed to associate particular inputs and to clone via the \hyperlink{classiCub_1_1boostMIL_1_1ClassifierFactory}{Classifier\+Factory}. \\
+\hline
+{\em \+\_\+resource} & container for the classifier parameters. \\
+\hline
+\end{DoxyParams}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!Online\+Boost@{Online\+Boost}}
+\index{Online\+Boost@{Online\+Boost}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{Online\+Boost}]{\setlength{\rightskip}{0pt plus 5cm}Online\+Boost\+::\+Online\+Boost (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{\+\_\+type, }
+\item[{yarp\+::os\+::\+Resource\+Finder \&}]{\+\_\+resource}
+\end{DoxyParamCaption}
+)}\label{classiCub_1_1boostMIL_1_1OnlineBoost_afbf710e0e9455a5b0215e998c3c33acd}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+type} & type of the classifier. It is needed to associate particular inputs and to clone via the \hyperlink{classiCub_1_1boostMIL_1_1ClassifierFactory}{Classifier\+Factory}. \\
+\hline
+{\em \+\_\+resource} & container for the classifier parameters. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file Online\+Boost.\+cpp.
+
+
+\begin{DoxyCode}
+47     :StrongClassifier(\_type,\_resource)
+48 \{
+49     initResource();
+50 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!classify@{classify}}
+\index{classify@{classify}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{classify}]{\setlength{\rightskip}{0pt plus 5cm}int Strong\+Classifier\+::classify (
+\begin{DoxyParamCaption}
+\item[{const Inputs $\ast$}]{input, }
+\item[{Output $\ast$}]{output = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}\label{classiCub_1_1boostMIL_1_1StrongClassifier_a1fee2d421c908292846b6e7356c7c6d1}
+
+
+Classifies the given input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & the input to classify. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sign of the margin. Returns 0 if the margin is 0. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a8a3fe3145859ef045f4b7e3f1a61d984}{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}.
+
+
+
+Definition at line 73 of file Strong\+Classifier.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::margin(), and i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::ready.
+
+
+
+Referenced by update(), and i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Support\+::update().
+
+
+\begin{DoxyCode}
+74 \{
+75     \textcolor{keywordflow}{if}(!ready)
+76     \{
+77         \textcolor{keywordflow}{if}(output!=NULL)
+78             output->setLabel(0);
+79 
+80         \textcolor{keywordflow}{return} 0;
+81     \}
+82 
+83     \textcolor{keywordtype}{int} label;
+84 
+85     \textcolor{keywordtype}{double} m = margin(input,output);
+86     \textcolor{keywordflow}{if}(m == 0.0)
+87         label=0;
+88 
+89     \textcolor{keywordflow}{if}(m > 0.0)
+90         label=1;
+91     \textcolor{keywordflow}{else}
+92         label=-1;
+93 
+94     \textcolor{keywordflow}{if}(output!=NULL)
+95         output->setLabel(label);
+96 
+97     \textcolor{keywordflow}{return} label;
+98 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!clear@{clear}}
+\index{clear@{clear}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Online\+Boost\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1OnlineBoost_a7b725fb242d59067afce0030f6f8d259}
+
+
+Clear Method. 
+
+Returns the classifier to its original condition (Pre-\/initialization). 
+
+Reimplemented from \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a01b6ff00adc73d01d1b6ebca017a8014}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}.
+
+
+
+Definition at line 258 of file Online\+Boost.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::clear().
+
+
+
+Referenced by from\+Stream(), from\+String(), and $\sim$\+Online\+Boost().
+
+
+\begin{DoxyCode}
+259 \{
+260     StrongClassifier::clear();
+261 
+262     weak\_classifiers\_size = 0;
+263 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!error\+\_\+rate@{error\+\_\+rate}}
+\index{error\+\_\+rate@{error\+\_\+rate}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{error\+\_\+rate}]{\setlength{\rightskip}{0pt plus 5cm}virtual double i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::error\+\_\+rate (
+\begin{DoxyParamCaption}
+\item[{const std\+::list$<$ Inputs $\ast$ $>$ \&}]{dataset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a8f9de230214c99305df65010e5ddbe77}
+
+
+Returns the error rate of the classifier over a given dataset assuming uniform weight distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataset} & the datataset over which compute the error rate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the error rate. 
+\end{DoxyReturn}
+
+
+Definition at line 158 of file Weak\+Classifier.\+h.
+
+
+\begin{DoxyCode}
+159     \{
+160         std::list<double> weights(dataset.size(),1.0/dataset.size());
+161         \textcolor{keywordflow}{return} error_rate(dataset,weights);
+162     \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!error\+\_\+rate@{error\+\_\+rate}}
+\index{error\+\_\+rate@{error\+\_\+rate}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{error\+\_\+rate}]{\setlength{\rightskip}{0pt plus 5cm}virtual double i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::error\+\_\+rate (
+\begin{DoxyParamCaption}
+\item[{const std\+::list$<$ Inputs $\ast$ $>$ \&}]{dataset, }
+\item[{const std\+::list$<$ double $>$ \&}]{weights}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a294f03d21af03a5f96875562a5a979a0}
+
+
+Returns the error rate of the classifier over a given dataset with specified weight distribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dataset} & the datataset over which compute the error rate. \\
+\hline
+{\em weights} & the weight distribution over the given dataset. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the error rate. 
+\end{DoxyReturn}
+
+
+Definition at line 171 of file Weak\+Classifier.\+h.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::classify().
+
+
+\begin{DoxyCode}
+172     \{
+173         \textcolor{keywordtype}{double} e = 0.0;
+174         std::list<Inputs*>   ::const\_iterator d\_itr = dataset.begin();
+175         std::list<double>    ::const\_iterator w\_itr = weights.begin();
+176         \textcolor{keywordflow}{while}(d\_itr != dataset.begin())
+177         \{
+178             \textcolor{keywordflow}{if}(classify(*d\_itr) != (*d\_itr)->getLabel())
+179                 e += *w\_itr;
+180             d\_itr++;
+181         \}
+182         \textcolor{keywordflow}{return} e;
+183     \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!from\+Stream@{from\+Stream}}
+\index{from\+Stream@{from\+Stream}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{from\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}void Online\+Boost\+::from\+Stream (
+\begin{DoxyParamCaption}
+\item[{std\+::ifstream \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1OnlineBoost_a4258aee4c77ab8633765167389c30fbb}
+
+
+Loads a classifier from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & string encoding the classifier to be loaded \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a64bcbc003a3fcde2bd8f20cc98f4d71b}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}.
+
+
+
+Definition at line 127 of file Online\+Boost.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::alphas, clear(), i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::function\+\_\+space, is\+Ready(), i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::resource, and i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::weak\+\_\+classifiers.
+
+
+\begin{DoxyCode}
+128 \{
+129     clear();
+130 
+131     \textcolor{keywordtype}{int} wc\_size;
+132     fin.read((\textcolor{keywordtype}{char}*)&wc\_size,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+133 
+134     weak\_classifiers\_size=wc\_size;
+135 
+136     alphas.resize(wc\_size);
+137     weak_classifiers.resize(wc\_size);
+138 
+139     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<wc\_size; i++)
+140     \{
+141         fin.read((\textcolor{keywordtype}{char}*)&alphas[i],\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+142 
+143         \textcolor{keywordtype}{int} size\_of\_type;
+144         fin.read((\textcolor{keywordtype}{char}*)&size\_of\_type,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+145         \textcolor{keywordtype}{char} *wc\_type=\textcolor{keyword}{new} \textcolor{keywordtype}{char}[size\_of\_type+1];
+146         fin.read((\textcolor{keywordtype}{char}*)wc\_type,size\_of\_type*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+147 
+148         wc\_type[size\_of\_type]=\textcolor{charliteral}{'\(\backslash\)0'};
+149         weak_classifiers[i]=\textcolor{keyword}{new} SelectorClassifier(wc\_type,resource,&
+      function_space);
+150         \textcolor{keyword}{delete} [] wc\_type;
+151 
+152         weak_classifiers[i]->fromStream(fin);
+153     \}
+154 
+155     isReady();
+156 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!from\+String@{from\+String}}
+\index{from\+String@{from\+String}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{from\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Online\+Boost\+::from\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1OnlineBoost_a3c72a282cb86a650eac248f03064bea5}
+
+
+Loads a classifier from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & string encoding the classifier to be loaded \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_abdfebbfe702c289e2841a26835e8d46f}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}.
+
+
+
+Definition at line 184 of file Online\+Boost.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::alphas, clear(), i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::function\+\_\+space, is\+Ready(), i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::resource, and i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::weak\+\_\+classifiers.
+
+
+\begin{DoxyCode}
+185 \{
+186     clear();
+187 
+188     yarp::os::Bottle bLoader;
+189     bLoader.fromString(str.c\_str());
+190 
+191     weak\_classifiers\_size=bLoader.size();
+192 
+193     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<bLoader.size(); i++)
+194     \{
+195         alphas.push\_back(bLoader.get(i).asList()->find(\textcolor{stringliteral}{"alpha"}).asDouble());
+196 
+197         yarp::os::Bottle *bSelector=bLoader.get(i).asList()->find(\textcolor{stringliteral}{"weak\_classifier"}).asList();
+198 
+199         weak_classifiers.push\_back(\textcolor{keyword}{new} SelectorClassifier(bSelector->find(\textcolor{stringliteral}{"type"}).asString().c\_str(),
+      resource,&function_space));
+200         weak_classifiers.back()->fromString(bSelector->toString().c\_str());
+201     \}
+202 
+203     isReady();
+204 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!get\+Error@{get\+Error}}
+\index{get\+Error@{get\+Error}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{get\+Error}]{\setlength{\rightskip}{0pt plus 5cm}double i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::get\+Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_a525811a7380bcfd3cbc1edbe90e0842a}
+
+
+Returns the current error exhibited by the classifier. 
+
+\begin{DoxyReturn}{Returns}
+the current error. 
+\end{DoxyReturn}
+
+
+Definition at line 140 of file Weak\+Classifier.\+h.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::error.
+
+
+
+Referenced by i\+Cub\+::boost\+M\+I\+L\+::\+Ada\+Boost\+::train(), and update().
+
+
+\begin{DoxyCode}
+140 \{\textcolor{keywordflow}{return} error;\}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{get\+Type}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_aa5de990b0baac11f35f74493ca853ac5}
+
+
+Returns the classifier type information. 
+
+\begin{DoxyReturn}{Returns}
+the type of the classifier 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file Weak\+Classifier.\+h.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::type.
+
+
+
+Referenced by i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory\+::register\+Classifier(), i\+Cub\+::boost\+M\+I\+L\+::\+Selector\+Classifier\+::to\+Stream(), to\+Stream(), i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Support\+::to\+Stream(), i\+Cub\+::boost\+M\+I\+L\+::\+Avg\+Classifier\+::to\+Stream(), and i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::to\+Stream().
+
+
+\begin{DoxyCode}
+133 \{\textcolor{keywordflow}{return} type;\}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!initialize@{initialize}}
+\index{initialize@{initialize}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Online\+Boost\+::initialize (
+\begin{DoxyParamCaption}
+\item[{const Inputs $\ast$}]{initializer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1OnlineBoost_afdeb1621efc90c5701f190404aa9b4c4}
+
+
+Initializes the online classifier with a bag of positive weak classifiers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initializer} & the Input containing the weak classifiers. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a009ec6d067be95a012082335c1e24937}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}.
+
+
+
+Definition at line 111 of file Online\+Boost.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::function\+\_\+space, and i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory\+::instance().
+
+
+\begin{DoxyCode}
+112 \{
+113     ClassifierFactory::instance().pack(initializer,function_space);
+114 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!initialize@{initialize}}
+\index{initialize@{initialize}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Online\+Boost\+::initialize (
+\begin{DoxyParamCaption}
+\item[{const std\+::list$<$ Inputs $\ast$ $>$ \&}]{initializer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1OnlineBoost_a92965b42f03b4d597d8fad1639c147c8}
+
+
+Initializes the online classifier with a list of bags of positive weak classifiers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initializer} & the Input list containing the weak classifiers. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_ad6529dabd9cefe82447987b9b650e76e}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}.
+
+
+
+Definition at line 116 of file Online\+Boost.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::function\+\_\+space, and i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory\+::instance().
+
+
+\begin{DoxyCode}
+117 \{
+118     \textcolor{keywordflow}{for}(std::list<Inputs*>::const\_iterator itr=initializer.begin(); itr!=initializer.end(); itr++)
+119         ClassifierFactory::instance().pack((*itr),function_space);
+120 
+121     \textcolor{comment}{//shuffle the function\_space}
+122     random\_shuffle(function_space.begin(),function_space.end());
+123 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!is\+Ready@{is\+Ready}}
+\index{is\+Ready@{is\+Ready}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{is\+Ready}]{\setlength{\rightskip}{0pt plus 5cm}bool Online\+Boost\+::is\+Ready (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1OnlineBoost_a672bc56c42b3b4aa9bde7ac52d0ace5f}
+
+
+Updates the classifier and verifies if it is ready to be trained and to classify. 
+
+\begin{DoxyReturn}{Returns}
+true if and only if the classifier is ready. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a406ccd141599b0d3c8b6dd9de6a358ba}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}.
+
+
+
+Definition at line 79 of file Online\+Boost.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::ready, and i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::weak\+\_\+classifiers.
+
+
+
+Referenced by from\+Stream(), from\+String(), and update().
+
+
+\begin{DoxyCode}
+80 \{
+81     \textcolor{comment}{//OnlineBoost is initialized if all the WeakClassifiers are initialized}
+82     ready = \textcolor{keyword}{true};
+83     \textcolor{keywordflow}{if}(weak\_classifiers\_size)
+84     \{
+85         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < weak_classifiers.size(); i++)
+86              \textcolor{keywordflow}{if}(!weak_classifiers[i]->isReady()) ready = \textcolor{keyword}{false};
+87     \}
+88     \textcolor{keywordflow}{else}
+89         ready = \textcolor{keyword}{false};
+90     \textcolor{keywordflow}{return} ready;
+91 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!load@{load}}
+\index{load@{load}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}bool Strong\+Classifier\+::load (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}\label{classiCub_1_1boostMIL_1_1StrongClassifier_a3678df5fef278e2a2e6ceabb4c82f81b}
+
+
+Loads a previously saved strong classifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & where the classifier has been saved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false in case of success/failure 
+\end{DoxyReturn}
+
+
+Definition at line 234 of file Strong\+Classifier.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::clear(), i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::from\+Stream(), and i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::load\+As\+String().
+
+
+\begin{DoxyCode}
+235 \{
+236     this->clear();
+237 
+238     std::ifstream fin(path.c\_str(),std::ios::in | std::ios::binary);
+239 
+240     \textcolor{keywordflow}{if}(!fin.is\_open())
+241         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+242 
+243     \textcolor{comment}{//check if the file was saved in string or binary format}
+244     \textcolor{keywordtype}{char} c;
+245     fin.read(&c,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+246     \textcolor{keywordflow}{if}(c==\textcolor{charliteral}{'('})
+247     \{
+248         fin.close();
+249         this->loadAsString(path);
+250     \}
+251     \textcolor{keywordflow}{else}
+252     \{
+253         fin.seekg(0);
+254         this->fromStream(fin);
+255         fin.close();
+256     \}
+257 
+258     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+259 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!load\+As\+String@{load\+As\+String}}
+\index{load\+As\+String@{load\+As\+String}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{load\+As\+String}]{\setlength{\rightskip}{0pt plus 5cm}bool Strong\+Classifier\+::load\+As\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}\label{classiCub_1_1boostMIL_1_1StrongClassifier_aa3dafb8b823e28e200ce97ec81676667}
+
+
+Loads a previously saved strong classifier. 
+
+The classifier must have been saved as a single string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & where the classifier has been saved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false in case of success/failure 
+\end{DoxyReturn}
+
+
+Definition at line 196 of file Strong\+Classifier.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::clear(), and i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::from\+String().
+
+
+
+Referenced by i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::load().
+
+
+\begin{DoxyCode}
+197 \{
+198     this->clear();
+199 
+200     std::ifstream fin(path.c\_str());
+201 
+202     \textcolor{keywordflow}{if}(!fin.is\_open())
+203         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+204 
+205     std::stringstream strstr;
+206     strstr<<fin.rdbuf();
+207 
+208 
+209     std::string str=strstr.str().c\_str();
+210 
+211 
+212     this->fromString(str);
+213 
+214     fin.close();
+215 
+216     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+217 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!margin@{margin}}
+\index{margin@{margin}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{margin}]{\setlength{\rightskip}{0pt plus 5cm}double Strong\+Classifier\+::margin (
+\begin{DoxyParamCaption}
+\item[{const Inputs $\ast$}]{input, }
+\item[{Output $\ast$}]{output = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}\label{classiCub_1_1boostMIL_1_1StrongClassifier_acd33ed5cc98ed84a61e27b41eec63c5c}
+
+
+Computes the margin of the given input. 
+
+The margin is the response of the \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier}{Strong\+Classifier} decision function to the given input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & the input provided to the classifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the margin of the given input scaled between 0 and 1. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a01b3c3834f0b0b81513ed49907bb2c16}{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}.
+
+
+
+Definition at line 51 of file Strong\+Classifier.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::alphas, and i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::weak\+\_\+classifiers.
+
+
+
+Referenced by i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::classify().
+
+
+\begin{DoxyCode}
+52 \{
+53     \textcolor{keywordtype}{double} s = 0.0;
+54     \textcolor{keywordtype}{double} a=0.0;
+55     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < weak_classifiers.size(); i++)
+56     \{
+57         \textcolor{comment}{//double ai=alphas[i]>0.0?alphas[i]:0.0;}
+58         \textcolor{comment}{//s+=ai*weak\_classifiers[i]->classify(input,output);}
+59         s+=alphas[i]*weak_classifiers[i]->classify(input,output);
+60         \textcolor{comment}{//a+=ai;}
+61         a+=fabs(alphas[i]);
+62     \}
+63 
+64     \textcolor{keywordflow}{return} (s+a)/(2*a);
+65 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!pack@{pack}}
+\index{pack@{pack}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{pack}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::list$<${\bf Weak\+Classifier}$\ast$$>$$\ast$ i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::pack (
+\begin{DoxyParamCaption}
+\item[{const Inputs $\ast$}]{input}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}\label{classiCub_1_1boostMIL_1_1WeakClassifier_abdf0b9bd48be536cd44939dc733097ed}
+
+
+Extract the input information relative to this classifier type and creates a list of Weak\+Classifiers from it. 
+
+Used for online methods to create the space of hypothesys directly from training data. Usually returns a null pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & the input from which extract the Weak\+Classifiers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list of pointers to the Weak\+Classifiers extracted from the input. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classiCub_1_1boostMIL_1_1MILClassifier_afc4a13e10568201a963701b8e983ccd7}{i\+Cub\+::boost\+M\+I\+L\+::\+M\+I\+L\+Classifier}.
+
+
+
+Definition at line 150 of file Weak\+Classifier.\+h.
+
+
+\begin{DoxyCode}
+150 \{\textcolor{keywordflow}{return} NULL;\}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!print\+Alphas@{print\+Alphas}}
+\index{print\+Alphas@{print\+Alphas}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{print\+Alphas}]{\setlength{\rightskip}{0pt plus 5cm}void Strong\+Classifier\+::print\+Alphas (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}\label{classiCub_1_1boostMIL_1_1StrongClassifier_acdfb5551c7b9315ab4077566809064fc}
+
+
+Prints the weights of all classifiers on a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & the input provided to the classifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the margin of the given input. It returns 0 if the classifier is not ready yet to classify the input. 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Strong\+Classifier.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::alphas.
+
+
+\begin{DoxyCode}
+68 \{
+69     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < alphas.size(); i++)
+70         fprintf(f,\textcolor{stringliteral}{"%f\(\backslash\)n"},alphas[i]);
+71 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!randomize\+Func\+Space@{randomize\+Func\+Space}}
+\index{randomize\+Func\+Space@{randomize\+Func\+Space}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{randomize\+Func\+Space}]{\setlength{\rightskip}{0pt plus 5cm}void Online\+Boost\+::randomize\+Func\+Space (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1OnlineBoost_aab39922f8637b15d5cfbfb8aaf3cf239}
+
+
+Randomizes the function space. 
+
+
+
+Definition at line 266 of file Online\+Boost.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::function\+\_\+space.
+
+
+\begin{DoxyCode}
+267 \{
+268     random\_shuffle(function_space.begin(),function_space.end());
+269 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!save@{save}}
+\index{save@{save}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}bool Strong\+Classifier\+::save (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}\label{classiCub_1_1boostMIL_1_1StrongClassifier_ac812325b217d16e1e3c469e5d4a9eb76}
+
+
+Saves the strong classifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & where the classifier has to be saved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false in case of success/failure 
+\end{DoxyReturn}
+
+
+Definition at line 220 of file Strong\+Classifier.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::to\+Stream().
+
+
+\begin{DoxyCode}
+221 \{
+222     std::ofstream fout(path.c\_str(),std::ios::out | std::ios::binary);
+223 
+224     \textcolor{keywordflow}{if}(!fout.is\_open())
+225         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+226 
+227     this->toStream(fout);
+228 
+229     fout.close();
+230 
+231     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+232 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!save\+As\+String@{save\+As\+String}}
+\index{save\+As\+String@{save\+As\+String}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{save\+As\+String}]{\setlength{\rightskip}{0pt plus 5cm}bool Strong\+Classifier\+::save\+As\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}\label{classiCub_1_1boostMIL_1_1StrongClassifier_ab92075af6f373b770f723e1289fca780}
+
+
+Saves the strong classifier in a single string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & where the classifier has to be saved.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false in case of success/failure 
+\end{DoxyReturn}
+
+
+Definition at line 183 of file Strong\+Classifier.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::to\+String().
+
+
+\begin{DoxyCode}
+184 \{
+185     std::ofstream fout(path.c\_str());
+186 
+187     \textcolor{keywordflow}{if}(!fout.is\_open())
+188         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+189 
+190     fout << this->toString();
+191 
+192     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+193 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!to\+Stream@{to\+Stream}}
+\index{to\+Stream@{to\+Stream}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{to\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}void Online\+Boost\+::to\+Stream (
+\begin{DoxyParamCaption}
+\item[{std\+::ofstream \&}]{fout}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1OnlineBoost_a873e5570c055fa6ca09e0ef23b034945}
+
+
+Encodes the classifier in a single string. 
+
+
+
+Reimplemented from \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a5f8724e7d8cffd11e4128087c4c18412}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}.
+
+
+
+Definition at line 159 of file Online\+Boost.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::alphas, i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::get\+Type(), and i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::weak\+\_\+classifiers.
+
+
+\begin{DoxyCode}
+160 \{
+161     \textcolor{comment}{//write the size of the list of weak classifiers}
+162     \textcolor{keywordtype}{int} wc\_size=this->weak_classifiers.size();
+163     fout.write((\textcolor{keywordtype}{char}*)&wc\_size,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+164 
+165     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<wc\_size; i++)
+166     \{
+167         fout.write((\textcolor{keywordtype}{char}*)&alphas[i],\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));
+168 
+169         \textcolor{keywordtype}{int} size\_of\_type=weak_classifiers[i]->getType().size();
+170         fout.write((\textcolor{keywordtype}{char}*)&size\_of\_type,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+171 
+172         \textcolor{keywordtype}{char} *wc\_type=\textcolor{keyword}{new} \textcolor{keywordtype}{char}[size\_of\_type+1];
+173         sprintf(wc\_type,\textcolor{stringliteral}{"%s"},weak_classifiers[i]->getType().c\_str());
+174         fout.write((\textcolor{keywordtype}{char}*)wc\_type,size\_of\_type*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+175 
+176         \textcolor{keyword}{delete} [] wc\_type;
+177         weak_classifiers[i]->toStream(fout);
+178     \}
+179 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Strong\+Classifier\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}\label{classiCub_1_1boostMIL_1_1StrongClassifier_adb838aab38a5503330b4335c2b4d7a0f}
+
+
+Encodes the classifier in a single string. 
+
+\begin{DoxyReturn}{Returns}
+a string encoding the current classifier form 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classiCub_1_1boostMIL_1_1WeakClassifier_a980cd41ba074e3bdbfec697e7bee06f0}{i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier}.
+
+
+
+Definition at line 102 of file Strong\+Classifier.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::alphas, and i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::weak\+\_\+classifiers.
+
+
+
+Referenced by i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::save\+As\+String().
+
+
+\begin{DoxyCode}
+103 \{
+104     std::stringstream strstr;
+105 
+106     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < this->weak_classifiers.size(); i++)
+107         strstr << \textcolor{stringliteral}{"((alpha "} << alphas[i] << \textcolor{stringliteral}{") (weak\_classifier ("} << 
+      weak_classifiers[i]->toString() << \textcolor{stringliteral}{"))) "} << std::endl;
+108 
+109     \textcolor{keywordflow}{return} strstr.str().c\_str();
+110 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!train@{train}}
+\index{train@{train}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{train}]{\setlength{\rightskip}{0pt plus 5cm}void Online\+Boost\+::train (
+\begin{DoxyParamCaption}
+\item[{const std\+::list$<$ Inputs $\ast$ $>$ \&}]{training\+\_\+set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1OnlineBoost_ac041211afdfcdb4212c01e1bbcfe8ad9}
+
+
+Trains the classifier with respect to a list of inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em training\+\_\+set} & the list of inputs over which train the classifier. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a9d593cc5db61f2c615a510e8027d2b47}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}.
+
+
+
+Definition at line 95 of file Online\+Boost.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::verbose.
+
+
+\begin{DoxyCode}
+96 \{
+97     \textcolor{keywordtype}{int} cnt=0;
+98     \textcolor{keywordflow}{for}(std::list<Inputs*>::const\_iterator itr = training\_set.begin(); itr != training\_set.end(); itr++)
+99     \{
+100         train(*itr);
+101         \textcolor{keywordflow}{if}(verbose) fprintf(stdout,\textcolor{stringliteral}{"[BoostMIL] trained sample n. %d\(\backslash\)r"},++cnt);
+102     \}
+103 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!train@{train}}
+\index{train@{train}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{train}]{\setlength{\rightskip}{0pt plus 5cm}void Online\+Boost\+::train (
+\begin{DoxyParamCaption}
+\item[{const Inputs $\ast$}]{input, }
+\item[{double}]{weight = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1OnlineBoost_a70417657e5af5c133a824be77cdc7725}
+
+
+Trains the classifier with respect to a single input. 
+
+Usually an online method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & the inputs over which train the classifier. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_a78e5214aaad872e3f34ff8d8f1326536}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}.
+
+
+
+Definition at line 105 of file Online\+Boost.\+cpp.
+
+
+
+References update().
+
+
+\begin{DoxyCode}
+106 \{
+107     update(input,weight);
+108 \}
+\end{DoxyCode}
+\index{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}!update@{update}}
+\index{update@{update}!i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost@{i\+Cub\+::boost\+M\+I\+L\+::\+Online\+Boost}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Online\+Boost\+::update (
+\begin{DoxyParamCaption}
+\item[{const Inputs $\ast$}]{input, }
+\item[{double \&}]{weight}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1boostMIL_1_1OnlineBoost_a4309a08bf487eaaf911a1977deed8086}
+
+
+Updates the classifier with respect to an input with associated weight. 
+
+Usually an online method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & the input. \\
+\hline
+{\em the} & relevance weight associated to the given input. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classiCub_1_1boostMIL_1_1StrongClassifier_aabb7f754e938b0529147e55d72c7a66c}{i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier}.
+
+
+
+Definition at line 218 of file Online\+Boost.\+cpp.
+
+
+
+References i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::alphas, i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::classify(), i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::function\+\_\+space, i\+Cub\+::boost\+M\+I\+L\+::\+Weak\+Classifier\+::get\+Error(), i\+Cub\+::boost\+M\+I\+L\+::\+Classifier\+Factory\+::instance(), is\+Ready(), and i\+Cub\+::boost\+M\+I\+L\+::\+Strong\+Classifier\+::weak\+\_\+classifiers.
+
+
+
+Referenced by train().
+
+
+\begin{DoxyCode}
+219 \{
+220     \textcolor{comment}{//if the algorithm uses a function space, extract new weak learners from the input (if it is a positive
+       sample).}
+221     \textcolor{keywordflow}{if}(function_space.size()<max\_function\_space\_size && input->getLabel() == +1)
+222     \{
+223         ClassifierFactory::instance().pack(input,function_space);
+224 
+225         \textcolor{comment}{//avoid getting a function space too large}
+226         \textcolor{keywordflow}{while}(function_space.size() > max\_function\_space\_size)
+227         \{
+228             \textcolor{keyword}{delete} function_space.front();
+229             function_space.pop\_front();
+230         \}
+231     \}
+232 
+233     \textcolor{keywordflow}{if}(isReady())
+234     \{
+235         \textcolor{comment}{//propagate the sample through the list of weak classifiers}
+236         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < weak_classifiers.size(); i++)
+237         \{
+238             weak_classifiers[i]->update(input,weight);
+239 
+240             \textcolor{comment}{//if the WeakClassifiers abstains from classifing, do not update the weight}
+241             \textcolor{keywordflow}{if}(weak_classifiers[i]->classify(input) != 0)
+242             \{
+243                 \textcolor{keywordflow}{if}(weak_classifiers[i]->classify(input) == input->getLabel())
+244                     weight *= 0.5/(1.0-weak_classifiers[i]->getError());
+245                 \textcolor{keywordflow}{else}
+246                     weight *= 0.5/weak_classifiers[i]->getError();
+247             \}
+248 
+249             \textcolor{comment}{//update alpha}
+250             alphas[i] = 0.5*log((1-weak_classifiers[i]->getError())/
+      weak_classifiers[i]->getError());
+251 
+252         \}
+253     \}
+254 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/dev/icub-\/contrib-\/iit/boost-\/mil/lib/include/i\+Cub/boost\+M\+I\+L/Online\+Boost.\+h\item 
+C\+:/dev/icub-\/contrib-\/iit/boost-\/mil/lib/src/Online\+Boost.\+cpp\end{DoxyCompactItemize}
